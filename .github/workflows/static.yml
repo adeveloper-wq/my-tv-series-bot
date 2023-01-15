@@ -32,6 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: |
+          #!/bin/bash
           touch index.html
           echo "${{ github.event.client_payload.new_episode_page }}" >> index.html
       - name: Setup Pages
