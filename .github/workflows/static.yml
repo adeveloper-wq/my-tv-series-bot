@@ -31,7 +31,7 @@ jobs:
     steps:
       - run: |
           touch index.html
-          echo github.event.client_payload.foo >> index.html
+          echo github.event.client_payload.new_episode >> index.html
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
