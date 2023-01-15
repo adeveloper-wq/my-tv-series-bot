@@ -34,7 +34,7 @@ jobs:
       - run: |
           #!/bin/bash
           touch index.html
-          echo "${{ github.event.client_payload.new_episode_page }}" >> index.html
+          echo -e '${{ github.event.client_payload.new_episode_page }}' >> index.html
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
