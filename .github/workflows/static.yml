@@ -31,6 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - run: |
+          touch index.html
+          echo "<h1>Test</h1>" >> index.html
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
@@ -38,9 +41,6 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-      - run: |
-          touch index.html
-          echo "<h1>Test</h1>" >> index.html
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
